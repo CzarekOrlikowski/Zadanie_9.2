@@ -8,7 +8,10 @@ public class Test {
 
         carsToRent[0].rent("jan", "kowalski", "2se43");
         System.out.println(carsToRent[0]);
+        carsToRent[0].rent("adam", "nowak", "223ee3");
         carsToRent[0].handOver();
+        System.out.println(carsToRent[0]);
+        carsToRent[0].rent("adam", "nowak", "223ee3");
         System.out.println(carsToRent[0]);
     }
 }

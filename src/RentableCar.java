@@ -16,8 +16,11 @@ public class RentableCar extends Car implements Rentable {
 
     @Override
     public void rent(String firstName, String lastName, String id) {
-        this.person = new Person(firstName, lastName, id);
-
+        if (isRent()) {
+            this.person = new Person(firstName, lastName, id);
+        } else {
+            System.out.println("Pojazd już wypożyczony!");
+        }
     }
 
     @Override
@@ -27,9 +30,7 @@ public class RentableCar extends Car implements Rentable {
 
     @Override
     public boolean isRent() {
-        if (this.person == null){
-            return true;
-        } else return false;
+        return person == null;
     }
 
     @Override
@@ -38,7 +39,6 @@ public class RentableCar extends Car implements Rentable {
                 "DANE WYPOŻACZAJĄCEGO" + "\n" +
                 "RentableCar{" +
                 "person=" + person +
-                '}' + "\n"
-                + "dostępny: " + isRent() + "\n";
+                '}' + "\n";
     }
 }

@@ -1,10 +1,10 @@
 public interface Movable {
 
-    public void turnLeft();
+    void turnLeft();
 
-    public void turnRight();
+    void turnRight();
 
-    public void goForward();
+    void goForward();
 
-    public void goBack();
+    void goBack();
 }

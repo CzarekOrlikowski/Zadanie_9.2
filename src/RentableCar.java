@@ -3,7 +3,7 @@ public class RentableCar extends Car implements Rentable {
 
     public RentableCar(String name, int year, int seatsNumber) {
         super(name, year, seatsNumber);
-        this.person = new Person(null, null, null);
+        this.person = null;
     }
 
     public Person getPerson() {
@@ -22,14 +22,12 @@ public class RentableCar extends Car implements Rentable {
 
     @Override
     public void handOver() {
-        this.person.setFirstName(null);
-        this.person.setLastName(null);
-        this.person.setId(null);
+        this.person = null;
     }
 
     @Override
     public boolean isRent() {
-        if (this.person.getFirstName() == null){
+        if (this.person == null){
             return false;
         } else return true;
     }
@@ -38,8 +36,8 @@ public class RentableCar extends Car implements Rentable {
     public String toString() {
         return super.toString() +
                 "DANE WYPOŻACZAJĄCEGO" + "\n" +
-                "imię: " + getPerson().getFirstName() + "\n" +
-                "nazwisko: " + getPerson().getLastName() + "\n" +
-                "id: " + getPerson().getId() + "\n";
+                "RentableCar{" +
+                "person=" + person +
+                '}' + "\n";
     }
 }

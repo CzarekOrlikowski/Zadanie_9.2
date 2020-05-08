@@ -15,26 +15,6 @@ public class Car extends Vehicle {
     }
 
     @Override
-    public void turnLeft() {
-        super.turnLeft();
-    }
-
-    @Override
-    public void turnRight() {
-        super.turnRight();
-    }
-
-    @Override
-    public void goForward() {
-        super.goForward();
-    }
-
-    @Override
-    public void goBack() {
-        super.goBack();
-    }
-
-    @Override
     public String toString() {
         return "POJAZD Z BAZY" + "\n" +
                 super.toString() +

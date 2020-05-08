@@ -28,8 +28,8 @@ public class RentableCar extends Car implements Rentable {
     @Override
     public boolean isRent() {
         if (this.person == null){
-            return false;
-        } else return true;
+            return true;
+        } else return false;
     }
 
     @Override
@@ -38,6 +38,7 @@ public class RentableCar extends Car implements Rentable {
                 "DANE WYPOŻACZAJĄCEGO" + "\n" +
                 "RentableCar{" +
                 "person=" + person +
-                '}' + "\n";
+                '}' + "\n"
+                + "dostępny: " + isRent() + "\n";
     }
 }
